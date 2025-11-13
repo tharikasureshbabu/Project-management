@@ -19,3 +19,14 @@ This project showcases a responsive blog layout using **HTML**, **CSS**, **JavaS
 
 ## 🧩 Project Structure
 
+The-Indian-Blogger/
+├── index.html # Main blog homepage
+├── style.css # Styling for layout and theme
+├── script.js # Handles markdown rendering, dark mode, and search
+├── posts/
+│ ├── 1.md # Example blog post (Markdown format)
+│ ├── 2.md
+│ └── ...
+├── assets/
+│ └── logo.png # Project logo
+└── README.md # Project documentation
