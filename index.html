@@ -3,82 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PBLog</title>
+  <title>Tharika’s Corner</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/4/4f/India_Flag_Icon.svg">
 </head>
 <body class="light">
-<header class="p-6 bg-primary text-white flex flex-col md:flex-row items-center" role="banner">
+<header class="p-6 bg-[#ff9933] text-white flex flex-col md:flex-row items-center shadow-md" role="banner">
   <div class="flex items-center">
-    <img src="https://media.discordapp.net/attachments/1292540083513065524/1305991596260462592/wB2guJ7TLQTpQAAAABJRU5ErkJggg.png?ex=67350af4&is=6733b974&hm=a3f88f10ae71e69eedffb7472b2fdb1577627f20d042af07fd67a09decc8a46f&=&format=webp&quality=lossless&width=676&height=676" alt="Logo" class="h-10">
-    <span class="ml-2 text-xl font-bold">PBLog</span>
+    <img src="695ab455-d4ad-435e-ba24-5a78b05736bf.png" alt="Logo" class="h-10 rounded-full">
+    <span class="ml-2 text-xl font-bold text-black">Tharika’s Corner</span>
   </div>
-  <input type="text" placeholder="Search..." class="ml-4 p-2 rounded">
-  <button id="dark-mode-toggle" class="ml-auto bg-secondary text-white p-2 rounded mt-4 md:mt-0" aria-label="Toggle Dark Mode">
+  <input type="text" placeholder="Search blog posts..." class="ml-4 p-2 rounded text-black">
+  <button id="dark-mode-toggle" class="ml-auto bg-[#138808] text-white p-2 rounded mt-4 md:mt-0" aria-label="Toggle Dark Mode">
     <i id="dark-mode-icon" class="fas fa-moon"></i>
   </button>
 </header>
 
-<main class="p-6">
+<main class="p-6 bg-[#fffaf0]">
   <section id="blog-content-0" class="mb-8">
-    <h2 class="text-3xl font-bold mb-4">Blog Posts</h2>
-    <div id="post-list-5">
+    <h2 class="text-3xl font-bold mb-4 text-[#138808]">Latest Blog Posts</h2>
+
+    <div id="post-list">
       <div class="post-box" data-file="2.md">
-        <h3 class="post-title">What is a Blog?</h3>
-        <p class="post-author">Author: MrBashyal</p>
-        <p class="post-date">Date: 2024-07-29</p>
+        <h3 class="post-title">The Heartbeat of India: Chai & Conversations</h3>
+        <p class="post-author">Author: Tharika</p>
+        <p class="post-date">Date: 2025-11-13</p>
       </div>
-    </div>
-  </section>
-  <section id="blog-content-1" class="mb-8">
-    <div id="post-list-1">
-      <div class="post-box" data-file="pb.html">
-        <h3 class="post-title">Github's ReadMe</h3>
-        <p class="post-author">Author: MrBashyal</p>
-        <p class="post-date">Date: 2024-07-09</p>
-      </div>
-    </div>
-  </section>
-  <section id="blog-content-2" class="mb-8">
-    <div id="post-list-2">
-      <div class="post-box" data-file="5.md">
-        <h3 class="post-title">Sustainable Tech: Innovations for a Greener Future</h3>
-        <p class="post-author">Author: Pebo</p>
-        <p class="post-date">Date: 2023-10-01</p>
-      </div>
-    </div>
-  </section>
-  <section id="blog-content-3" class="mb-8">
-    <div id="post-list-3">
+
       <div class="post-box" data-file="3.md">
-        <h3 class="post-title">The Rise of Tech Startups in Nepal</h3>
-        <p class="post-author">Author: Wispy</p>
-        <p class="post-date">Date: 2023-12-01</p>
+        <h3 class="post-title">Colors, Lights & Love: Indian Festivals We Cherish</h3>
+        <p class="post-author">Author: Tharika</p>
+        <p class="post-date">Date: 2025-10-10</p>
       </div>
-    </div>
-  </section>
-  <section id="blog-content-4" class="mb-8">
-    <div id="post-list-9">
-      <div class="post-box" data-file="solo.md">
-        <h3 class="post-title">Solo Leveling</h3>
-        <p class="post-author">Author: Sung Jin-Woo</p>
-        <p class="post-date">Date: 2022-09-18</p>
-      </div>
-    </div>
-  </section>
-  <section id="blog-content-5" class="mb-8">
-    <div id="post-list-4">
+
       <div class="post-box" data-file="4.md">
-        <h3 class="post-title">Digital Wallets</h3>
-        <p class="post-author">Author: Parom</p>
-        <p class="post-date">Date: 2022-05-10</p>
+        <h3 class="post-title">Wander India: Hidden Gems Beyond the Cities</h3>
+        <p class="post-author">Author: Tharika</p>
+        <p class="post-date">Date: 2025-09-02</p>
+      </div>
+
+      <div class="post-box" data-file="5.md">
+        <h3 class="post-title">India’s Tech Boom: Startups Changing the Game</h3>
+        <p class="post-author">Author: Tharika</p>
+        <p class="post-date">Date: 2025-08-20</p>
       </div>
     </div>
   </section>
+
   <section id="content" class="mb-8"></section>
 </main>
-<footer class="p-6 bg-primary text-white text-center" role="contentinfo">
-  <p>&copy; 2024 MrBashyal</p>
+
+<footer class="p-6 bg-[#138808] text-white text-center" role="contentinfo">
+  <p>&copy; 2025 Tharika’s Corner | Made with ❤️ in India</p>
 </footer>
+
 <script src="script.js"></script>
 </body>
 </html>

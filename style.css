@@ -142,3 +142,145 @@ footer {
   background-color: var(--primary-light);
   color: white;
   text-align: center;}
+/* Post content styling for Kutty's Corner */
+.post-content {
+  max-width: 760px;
+  margin: 28px auto;
+  padding: 28px;
+  background: #fffaf0; /* soft warm paper */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(16, 24, 40, 0.06);
+  line-height: 1.75;
+  color: #1f2937; /* dark slate */
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* Headings */
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4 {
+  color: #0b5a2b; /* deep green */
+  margin: 18px 0 10px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.post-content h1 { font-size: 2.05rem; }
+.post-content h2 { font-size: 1.6rem; }
+.post-content h3 { font-size: 1.25rem; }
+
+/* Paragraphs */
+.post-content p {
+  margin: 12px 0;
+  color: #374151;
+  font-size: 1rem;
+}
+
+/* Links */
+.post-content a {
+  color: #d97706; /* saffron-ish accent */
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(217,119,6,0.12);
+}
+.post-content a:hover {
+  text-decoration: underline;
+}
+
+/* Blockquote */
+.post-content blockquote {
+  border-left: 4px solid #ff9933;
+  padding: 10px 16px;
+  margin: 16px 0;
+  background: rgba(255,153,51,0.05);
+  color: #4b5563;
+  border-radius: 6px;
+}
+
+/* Lists */
+.post-content ul,
+.post-content ol {
+  margin: 12px 0 12px 20px;
+}
+.post-content li {
+  margin: 6px 0;
+}
+
+/* Code & pre blocks */
+.post-content code {
+  background: #f3f4f6;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  font-size: 0.95em;
+}
+.post-content pre {
+  background: #0f172a;
+  color: #e6eef8;
+  padding: 14px;
+  border-radius: 10px;
+  overflow-x: auto;
+  margin: 16px 0;
+  font-size: 0.95rem;
+  box-shadow: inset 0 -1px 0 rgba(255,255,255,0.02);
+}
+
+/* Images */
+.post-content img {
+  max-width: 100%;
+  display: block;
+  margin: 14px auto;
+  border-radius: 8px;
+}
+
+/* Tables */
+.post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0;
+}
+.post-content th,
+.post-content td {
+  padding: 8px 10px;
+  border: 1px solid rgba(15,23,42,0.06);
+}
+.post-content th {
+  background: rgba(3,105,161,0.04);
+  text-align: left;
+}
+
+/* Small meta area */
+.post-meta {
+  display: flex;
+  gap: 10px;
+  color: #6b7280;
+  font-size: 0.92rem;
+  margin-bottom: 8px;
+}
+
+/* Mobile tweaks */
+@media (max-width: 640px) {
+  .post-content { padding: 18px; margin: 18px; border-radius: 8px; }
+  .post-content h1 { font-size: 1.6rem; }
+}
+
+/* Dark mode — toggled by adding .dark on body */
+body.dark .post-content {
+  background: #0b1220;
+  color: #e6eef8;
+  box-shadow: 0 8px 20px rgba(2,6,23,0.6);
+}
+body.dark .post-content p { color: #cbd5e1; }
+body.dark .post-content h1,
+body.dark .post-content h2,
+body.dark .post-content h3 { color: #9ae6b4; }
+body.dark .post-content blockquote {
+  background: rgba(255,153,51,0.06);
+  border-left-color: #ff9933;
+  color: #e6eef8;
+}
+body.dark .post-content pre {
+  background: #071024;
+  color: #dff1ff;
+}
+body.dark .post-content code { background: rgba(255,255,255,0.04); color: #dbeafe; }

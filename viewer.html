@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kutty’s Corner — Post</title>
+
+  <!-- Link your main stylesheet (contains .post-content styles from above) -->
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* small page chrome so viewer looks nice even without full site */
+    body { font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial; background: #f8fafc; margin: 0; padding: 28px; }
+    header.viewer-header { display:flex; gap:12px; align-items:center; margin-bottom:18px; }
+    .viewer-header a { color: #0b5a2b; text-decoration:none; font-weight:600; }
+    .viewer-header .controls { margin-left:auto; display:flex; gap:8px; align-items:center; }
+    .viewer-header button { padding:8px 10px; border-radius:8px; border:none; cursor:pointer; background:#ff9933; color:white; font-weight:600; }
+  </style>
+
+  <!-- Marked.js CDN for full Markdown features -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <header class="viewer-header">
+    <a href="index.html">⬅ Back to Tharika’s Corner</a>
+    <div class="controls">
+      <button id="toggle-theme">Toggle Dark</button>
+    </div>
+  </header>
+
+  <main id="page">
+    <article id="content" class="post-content">
+      <p>Loading post…</p>
+    </article>
+  </main>
+
+  <script>
+    // theme sync (localStorage)
+    (function () {
+      const saved = localStorage.getItem("kutty-theme");
+      if (saved === "dark") document.body.classList.add("dark");
+      const btn = document.getElementById("toggle-theme");
+      btn.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        const isDark = document.body.classList.contains("dark");
+        localStorage.setItem("kutty-theme", isDark ? "dark" : "light");
+      });
+    })();
+
+    // read ?post=filename.md
+    const params = new URLSearchParams(window.location.search);
+    const file = params.get("post");
+
+    function renderMarkdown(mdText) {
+      // Use marked to convert full markdown -> HTML
+      // You can set options if you want (gfm, breaks, highlight, etc.)
+      marked.setOptions({
+        gfm: true,
+        breaks: false,
+        headerIds: true
+      });
+
+      return marked.parse(mdText);
+    }
+
+    if (!file) {
+      document.getElementById("content").innerHTML = "<p>No post specified.</p>";
+    } else {
+      fetch(file)
+        .then(res => {
+          if (!res.ok) throw new Error("Not found");
+          return res.text();
+        })
+        .then(md => {
+          // Convert & place content
+          const html = renderMarkdown(md);
+          document.getElementById("content").innerHTML = html;
+
+          // optional: scroll to top
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        })
+        .catch(err => {
+          document.getElementById("content").innerHTML = "<p style='color:red'>Unable to load the post.</p>";
+          console.error(err);
+        });
+    }
+  </script>
+</body>
+</html>

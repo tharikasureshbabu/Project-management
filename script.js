@@ -15,7 +15,8 @@ document.getElementById("dark-mode-toggle").addEventListener("click", () => {
 document.querySelectorAll(".post-box").forEach((box) => {
   box.addEventListener("click", () => {
     const file = box.getAttribute("data-file");
-    window.open(file, "_blank");
+    // open markdown viewer page and pass filename
+    window.open(`viewer.html?post=${file}`, "_blank");
   });
 });
 
